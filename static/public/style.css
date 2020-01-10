@@ -1,0 +1,31 @@
+:root {
+    --dark-brown: #2e2a24;
+    --light-brown: #f9d094;
+    --brown: #4c3b20;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--dark-brown);
+    color: var(--light-brown);
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+body > * {
+    padding: 0rem 1rem;
+}
+
+.header {
+    display: flex;
+    background-color: var(--brown);
+}
+
+.centered-section {
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    width: 60%;  
+}
