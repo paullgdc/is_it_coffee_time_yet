@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
       - name: build project
         run: |
-          cargo install web
+          cargo install cargo-web
           cargo web deploy
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v2
