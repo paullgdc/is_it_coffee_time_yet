@@ -609,6 +609,9 @@ Module.STDWEB_PRIVATE.acquire_tmp = function( dummy ) {
             "__cargo_web_snippet_80d6d56760c65e49b7be8b6b01c1ea861b046bf0": function($0) {
                 Module.STDWEB_PRIVATE.decrement_refcount( $0 );
             },
+            "__cargo_web_snippet_88fdef85e51047882d647a7f6f4a63bf786cb581": function($0) {
+                $0 = Module.STDWEB_PRIVATE.to_js($0);var handle=($0);clearTimeout(handle.timeout_id);handle.callback.drop();
+            },
             "__cargo_web_snippet_8a049af1e4867892fca647811a9472e4c5832053": function($0, $1) {
                 $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0).add(($1));
             },
@@ -678,11 +681,17 @@ Module.STDWEB_PRIVATE.acquire_tmp = function( dummy ) {
             "__cargo_web_snippet_f03767d5868baf486b51c1e3988d0ce100e850ca": function($0, $1) {
                 $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return($1).lastChild;})());
             },
+            "__cargo_web_snippet_f11967ebdd9b2715f6e5dff0f3829fecc1b1a7ec": function($0, $1, $2) {
+                $1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);Module.STDWEB_PRIVATE.from_js($0, (function(){var callback=($1);var action=function(){callback();callback.drop();};var delay=($2);return{timeout_id:setTimeout(action,delay),callback:callback,};})());
+            },
             "__cargo_web_snippet_f6358c198ebcc61c9da370cca2679c0b8bc81a7b": function($0, $1) {
                 $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0).removeAttribute(($1));
             },
             "__cargo_web_snippet_f750c7bda400081b4d7209f43f9d59214d39f6ea": function($0, $1, $2) {
                 $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);var listener=($0);($1).removeEventListener(($2),listener);listener.drop();
+            },
+            "__cargo_web_snippet_ff5103e6cc179d13b4c7a785bdce2708fd559fc0": function($0) {
+                Module.STDWEB_PRIVATE.tmp = Module.STDWEB_PRIVATE.to_js( $0 );
             },
                 "__web_on_grow": __web_on_grow
             }
