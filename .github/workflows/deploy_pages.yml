@@ -10,11 +10,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: install cargo web
-        uses: actions-rs/cargo@v1
-        with:
-          command: install
-          args: cargo-web
       - name: build project
         run: |
           cargo install web
