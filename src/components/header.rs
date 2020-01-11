@@ -1,7 +1,6 @@
-use yew::{html, Component, ComponentLink, Html, ShouldRender, Properties};
+use yew::{html, Component, ComponentLink, Html, Properties, ShouldRender};
 
 use crate::utils::NeqAssign;
-
 
 #[derive(PartialEq, Clone, Properties)]
 pub struct HeaderProps<T: 'static + ToString + Clone + Default + PartialEq> {
@@ -9,11 +8,11 @@ pub struct HeaderProps<T: 'static + ToString + Clone + Default + PartialEq> {
     pub text: T,
 }
 
-pub struct Header<T: 'static + ToString+ Clone + Default+ PartialEq> {
+pub struct Header<T: 'static + ToString + Clone + Default + PartialEq> {
     props: HeaderProps<T>,
 }
 
-impl<T: 'static + ToString+ Clone + Default + PartialEq> Component for Header<T> {
+impl<T: 'static + ToString + Clone + Default + PartialEq> Component for Header<T> {
     type Message = ();
     type Properties = HeaderProps<T>;
 
@@ -34,5 +33,4 @@ impl<T: 'static + ToString+ Clone + Default + PartialEq> Component for Header<T>
             <div class="header"><h1>{ self.props.text.to_string() }</h1></div>
         }
     }
-
 }

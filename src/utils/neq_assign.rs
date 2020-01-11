@@ -1,4 +1,4 @@
-use yew::{ShouldRender};
+use yew::ShouldRender;
 
 pub trait NeqAssign {
     fn neq_assign(&mut self, new: Self) -> ShouldRender;

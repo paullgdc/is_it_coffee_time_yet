@@ -1,15 +1,13 @@
 pub mod components;
-pub mod utils;
 pub mod services;
+pub mod utils;
 
-use yew::{html, Component, ComponentLink, Html, ShouldRender};
 use stdweb::web::Date;
+use yew::{html, Component, ComponentLink, Html, ShouldRender};
 
 const NUMBER_OF_IMAGES: usize = 3;
 
-struct App {
-}
-
+struct App {}
 
 impl Component for App {
     type Message = ();
@@ -33,7 +31,10 @@ impl Component for App {
                 />
                 <h2>{if hour == 13 { "Yes" } else { "No" }}</h2>
                 <div class="centered-section">
-                    <img class="image" src={format!("public/coffee_cups/{}.jpg", image)} alt="Coffee cup"></img>
+                    <img class="image"
+                        src={format!("public/coffee_cups/{}.jpg", image)}
+                        alt="Coffee cup"
+                    ></img>
                 </div>
             </>
         }
